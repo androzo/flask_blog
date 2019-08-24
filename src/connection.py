@@ -1,6 +1,19 @@
 import mysql.connector
 import time
 
+import connection
+
+""" # Connect to MySQL
+conn = connection.connect("database","sys","root","test")
+
+# Disconnect from MySQL
+if conn is not None:
+    connection.disconnect(conn)
+else:
+    print("Flask startup aborted")
+    exit
+ """
+
 from mysql.connector import Error
 
 
