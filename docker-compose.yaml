@@ -13,9 +13,14 @@ services:
       FLASK_ENV: development
     ports:
       - 80:80
+    links:
+      - "db:database"
+    depends_on:
+      - db
 
   db:
     image: mysql
+    hostname: mysql_server
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
